@@ -1,0 +1,59 @@
+{
+    "name": "nhaynes/jira-sdk-laravel",
+    "description": "Provides a Laravel ServiceProvider and Facade for integrating the Jira PHP SDK.",
+    "keywords": ["jira", "atlassian", "sdk", "api", "jiraapi", "issues", "tickets", "facade", "service-provider", "laravel"],
+    "type": "library",
+    "homepage": "https://github.com/nhaynes/jira-sdk-laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Haynes",
+            "homepage": "https://github.com/nhaynes"
+        }
+    ],
+    "autoload": {
+        "psr-4": {            
+            "JiraSdk\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JiraSdk\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^8.0|^9.0",
+        "laravel/framework": "^8.0",
+        "nhaynes/jira-sdk-php": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "guzzlehttp/guzzle": "^7.5",
+        "phpunit/phpunit": "^9.6"
+    },
+    "suggest": {
+        "laravel/framework": "Allows testing of Laravel bindings."
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JiraSdk\\Laravel\\JiraServiceProvider"
+            ],
+            "aliases": {
+                "Jira": "JiraSdk\\Laravel\\JiraFacade"
+            }
+        }
+    },
+    "scripts": {
+        "cs": [
+            "vendor/bin/php-cs-fixer fix --verbose"
+        ],
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

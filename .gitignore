@@ -1,0 +1,13 @@
+#Dependencies
+/vendor
+
+# Composer
+composer.lock
+composer.phar
+
+# CS
+.php-cs-fixer.cache
+
+# Tests
+phpunit.xml
+.phpunit.result.cache
