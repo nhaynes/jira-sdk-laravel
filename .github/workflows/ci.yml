@@ -44,11 +44,8 @@ jobs:
                   php-version: ${{ matrix.php-version }}
                   extensions: mbstring, xml
 
-            - name: Install dependencies
-              run: "composer update --no-interaction ${{ matrix.composer-flags }}"
-
-            - name: Require laravel
-              run: composer require laravel/framework:${{ matrix.laravel-version }} --no-interaction --prefer-dist
+            - name: Install Dependencies
+              run: composer require laravel/framework:${{ matrix.laravel-version }} --no-interaction --prefer-dist ${{ matrix.composer-flags }}"
 
             - name: Run tests
               run: php vendor/bin/phpunit
