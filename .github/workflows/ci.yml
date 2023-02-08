@@ -45,7 +45,7 @@ jobs:
                   extensions: mbstring, xml
 
             - name: Install Dependencies
-              run: composer require laravel/framework:${{ matrix.laravel-version }} --no-interaction --prefer-dist ${{ matrix.composer-flags }}"
+              run: composer require laravel/framework:${{ matrix.laravel-version }} --no-interaction --prefer-dist ${{ matrix.composer-flags }}
 
             - name: Run tests
               run: php vendor/bin/phpunit
