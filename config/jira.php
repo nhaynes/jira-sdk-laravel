@@ -22,9 +22,9 @@ return [
     |
     */
 
-    'sitename' => env('JIRA_SITENAME'),
+    'sitename' => env('JIRA_SITENAME', 'your-domain'),
     'credentials' => [
-        'username' => env('JIRA_USERNAME'),
-        'token' => env('JIRA_TOKEN'),
+        'username' => env('JIRA_USERNAME', ''),
+        'token' => env('JIRA_TOKEN', ''),
     ],
 ];
