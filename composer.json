@@ -23,7 +23,7 @@
     },
     "require": {
         "php": ">=8.0",
-        "illuminate/support": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0|^10.0",
         "nhaynes/jira-sdk-php": "^1.0"
     },
     "require-dev": {
@@ -54,6 +54,9 @@
         ]
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }
